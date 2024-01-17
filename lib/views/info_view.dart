@@ -1,7 +1,8 @@
-import 'package:animated_introduction/animated_introduction.dart';
+import 'package:flutter/material.dart';
 import 'package:deal_app/constants/app_colors.dart';
 import 'package:deal_app/utils/info_view_utils.dart';
-import 'package:flutter/material.dart';
+import 'package:deal_app/views/bottom_view.dart';
+import 'package:animated_introduction/animated_introduction.dart';
 
 class InfoView extends StatelessWidget {
   const InfoView({super.key});
