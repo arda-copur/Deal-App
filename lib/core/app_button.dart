@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 
 class AppButton extends StatelessWidget {
-  final Widget child;
+  final String title;
   final VoidCallback onPressed;
   const AppButton({
     Key? key,
-    required this.child,
-    required this.onPressed,
+
+    required this.onPressed, required this.title,
   }) : super(key: key);
 
   @override
@@ -18,12 +18,12 @@ class AppButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          backgroundColor: AppColors.basicBlack,
+          backgroundColor: AppColors.primaryColor,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
         onPressed: onPressed,
-        child: child,
+       child: Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.basicWhite),),
       ),
     );
   }
