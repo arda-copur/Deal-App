@@ -43,15 +43,15 @@ class DatabaseHelper {
     ''');
   }
 
-  Future<int> insertIlan(Advert ilan) async {
+  Future<int> insertAdvert(Advert advert) async {
     Database db = await database;
-    return await db.insert('ilanlar', ilan.toMap());
+    return await db.insert('adverts', advert.toMap());
   }
 
-  Future<List<Advert>> getIlanlar() async {
+  Future<List<Advert>> getAdverts() async {
     Database db = await database;
-    List<Map<String, dynamic>> ilanlarMapList = await db.query('adverts');
-    return ilanlarMapList.map((map) => Advert.fromMap(map)).toList();
+    List<Map<String, dynamic>> advertsMapList = await db.query('adverts');
+    return advertsMapList.map((map) => Advert.fromMap(map)).toList();
   }
 
 
