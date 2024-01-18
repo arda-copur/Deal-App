@@ -1,4 +1,5 @@
 import 'package:deal_app/constants/app_colors.dart';
+import 'package:deal_app/constants/app_texts.dart';
 import 'package:deal_app/views/advertisements_view.dart';
 import 'package:deal_app/views/home_view.dart';
 import 'package:deal_app/views/share_advert_view.dart';
@@ -33,15 +34,15 @@ class _BottomViewState extends State<BottomView> {
             _currentIndex = index;
           });
         },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home,color: AppColors.basicWhite,),
-          label: "Home"
+        items:  [
+          BottomNavigationBarItem(icon: const Icon(Icons.home,color: AppColors.basicWhite,),
+          label: AppTexts.labelHome
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.list,color: AppColors.basicWhite,),
-          label: "Advertisements"
+          BottomNavigationBarItem(icon: const Icon(Icons.list,color: AppColors.basicWhite,),
+          label: AppTexts.labelAdv
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.add,color: AppColors.basicWhite,),
-          label: "Share"
+          BottomNavigationBarItem(icon: const Icon(Icons.add,color: AppColors.basicWhite,),
+          label: AppTexts.labelShare
           ),
         ],
       ),
