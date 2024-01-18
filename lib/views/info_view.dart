@@ -17,7 +17,7 @@ class InfoView extends StatelessWidget {
           nextText: "Devam",
           doneText: "Anladım",
           skipText: "Geç",
-          footerBgColor: AppColors.thirdColor,
+          footerBgColor: AppColors.primaryColor,
           activeDotColor: Colors.white,
           doneWidget: const Icon(
             Icons.chevron_right_sharp,

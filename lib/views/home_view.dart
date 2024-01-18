@@ -1,4 +1,5 @@
 import 'package:deal_app/constants/app_colors.dart';
+import 'package:deal_app/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 
 
@@ -22,9 +23,9 @@ class _HomeViewState extends State<HomeView> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Material( //bunu scaffold uyarla
-      color: AppColors.basicWhite,
-      child: SingleChildScrollView(
+    return Scaffold( 
+      backgroundColor: AppColors.basicWhite,
+      body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(
@@ -39,7 +40,7 @@ class _HomeViewState extends State<HomeView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "İstediğin her şey burada!",
+                        AppTexts.homeSlogan,
                         style: Theme.of(context)
                             .textTheme
                             .bodyMedium
@@ -53,7 +54,7 @@ class _HomeViewState extends State<HomeView> {
                             color: Color(0xFFFF2F08),
                           ),
                           Text(
-                            "İstanbul",
+                            AppTexts.homeCity,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
@@ -112,10 +113,10 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   child: Center(
                     child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "İstediğini ürünü ara...",
+                      decoration:  InputDecoration(
+                        hintText: AppTexts.homeSearchText,
                         border: InputBorder.none,
-                        prefixIcon: Icon(Icons.search),
+                        prefixIcon: const Icon(Icons.search),
                       ),
                     ),
                   ),
@@ -136,14 +137,14 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Kategoriler",
+                        AppTexts.homeCategories,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontSize: 22, fontWeight: FontWeight.w500),
                       ),
                       TextButton(
                         onPressed: () {},
                         child: Text(
-                          "Hepsini Gör",
+                          AppTexts.homeSeeAll,
                           style: Theme.of(context)
                               .textTheme
                               .bodyLarge
@@ -203,7 +204,7 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Popüler Ürünler",
+                        AppTexts.homePopular,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontSize: 22,
                               fontWeight: FontWeight.w500,
@@ -212,7 +213,7 @@ class _HomeViewState extends State<HomeView> {
                       TextButton(
                         onPressed: () {},
                         child: Text(
-                          "Hepsini Gör",
+                          AppTexts.homeSeeAll,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium
@@ -284,7 +285,7 @@ class _HomeViewState extends State<HomeView> {
                                         ),
                                         const SizedBox(height: 5),
                                         Text(
-                                          "2 Yıl Garantili",
+                                          AppTexts.homeWarranty,
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodyMedium
@@ -304,7 +305,7 @@ class _HomeViewState extends State<HomeView> {
                                             ),
                                             const SizedBox(width: 2),
                                             Text(
-                                              "Beğen",
+                                              AppTexts.homeLike,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .bodyMedium
@@ -329,7 +330,7 @@ class _HomeViewState extends State<HomeView> {
                                               ),
                                               const SizedBox(width: 2),
                                               Text(
-                                                "Istanbul",
+                                                AppTexts.homeCity,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodyMedium
@@ -349,7 +350,7 @@ class _HomeViewState extends State<HomeView> {
                                               borderRadius: BorderRadius.only(
                                                   topLeft:
                                                       Radius.circular(10))),
-                                                      child: Text("749 TL", style: Theme.of(context)
+                                                      child: Text(AppTexts.homePrice, style: Theme.of(context)
                                                     .textTheme
                                                     .bodyMedium
                                                     ?.copyWith(
