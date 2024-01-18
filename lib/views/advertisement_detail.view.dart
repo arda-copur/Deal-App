@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:ui';
 import 'package:deal_app/constants/app_colors.dart';
+import 'package:deal_app/constants/app_texts.dart';
 import 'package:deal_app/model/advert.dart';
 import 'package:flutter/material.dart';
 
@@ -101,10 +102,24 @@ class AdvertisementDetailView extends StatelessWidget {
                    padding: EdgeInsets.symmetric(vertical: 15),
                    child: Divider(height: 4,color: Color.fromARGB(255, 218, 217, 217),),
                  ),
-                Text("Açıklama",style: Theme.of(context).textTheme.titleLarge),
-                 const SizedBox(height: 10,),
+                Text(AppTexts.description,style: Theme.of(context).textTheme.titleLarge),
+                 const SizedBox(height: 5,),
                  Text(advert.description,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-                 
+                const SizedBox(height: 5,),
+                 Text("Konum",style: Theme.of(context).textTheme.titleLarge),
+                 const SizedBox(height: 5,),
+                 Text(advert.location,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
+                  const SizedBox(height: 5,),
+                   Text("Fiyat",style: Theme.of(context).textTheme.titleLarge),
+                    Text("${advert.price.toString()} TL ",style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
+                    const SizedBox(height: 5,),
+                    Text("Kategori",style: Theme.of(context).textTheme.titleLarge),
+                    Text(advert.category.toString(),style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
+                    const SizedBox(height: 5,),
+                    Text("Satıcı Numarası",style: Theme.of(context).textTheme.titleLarge),
+                    Text(advert.phoneNumber.toString(),style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
+
+             
                 ],
               ),
         );
