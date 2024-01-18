@@ -19,9 +19,9 @@
 
   <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" alt="project-screenshot" width="370" height="700"/>
 
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/detail_list.png" width="370" height="700"/>
   
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" alt="project-screenshot" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/share_advert.png" alt="project-screenshot" width="370" height="700"/>
 
 
 </div>
