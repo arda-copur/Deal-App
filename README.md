@@ -13,33 +13,21 @@
 
   <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/homeview.png" alt="project-screenshot" width="370" height="700"/>
 
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/adverts_list_1.png" alt="project-screenshot" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/advert_list_1.png" alt="project-screenshot" width="370" height="700"/>
 
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/adverts_list_2.png" alt="project-screenshot" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/advert_list_2.png" alt="project-screenshot" width="370" height="700"/>
 
   <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" alt="project-screenshot" width="370" height="700"/>
 
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/detail_list.png" alt="project-screenshot" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" width="370" height="700"/>
   
-  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/share_advert.png" alt="project-screenshot" width="370" height="700"/>
+  <img src="https://github.com/arda-copur/Deal-App/blob/main/ss/category_list.png" alt="project-screenshot" width="370" height="700"/>
 
-
-
-
-
-
-
-  
 
 </div>
 
   
-  
 
-
-
-
-  
 <h2>Packages</h2>
 
 
