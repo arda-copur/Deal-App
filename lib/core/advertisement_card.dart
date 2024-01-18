@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:deal_app/constants/app_colors.dart';
+import 'package:deal_app/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,6 +11,7 @@ class AdvertisementCard extends StatefulWidget {
   final String locationText;
   final String imageText;
   final String descriptionText;
+  final String statusText;
   const AdvertisementCard({
     Key? key,
     required this.titleText,
@@ -17,6 +19,7 @@ class AdvertisementCard extends StatefulWidget {
     required this.locationText,
     required this.imageText,
     required this.descriptionText,
+    required this.statusText,
   }) : super(key: key);
 
   @override
@@ -65,7 +68,7 @@ class _AdvertisementCardState extends State<AdvertisementCard> {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      widget.descriptionText,
+                      widget.statusText,
                       maxLines: 1,
                       style: Theme.of(context)
                           .textTheme
@@ -84,7 +87,7 @@ class _AdvertisementCardState extends State<AdvertisementCard> {
                         ),
                         const SizedBox(width: 2),
                         Text(
-                          "Beğen",
+                          AppTexts.homeLike,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium
@@ -105,7 +108,6 @@ class _AdvertisementCardState extends State<AdvertisementCard> {
                             color: Color(0xFFFF2F08),
                             size: 20,
                           ),
-                          const SizedBox(width: 2),
                           Text(
                             widget.locationText,
                             style: Theme.of(context)
@@ -120,20 +122,23 @@ class _AdvertisementCardState extends State<AdvertisementCard> {
                     ),
                     const SizedBox(height: 5),
                     Container(
+                      width: 150,
                       padding: const EdgeInsets.all(12),
                       decoration: const BoxDecoration(
                           color: Color(0xFFFF2F08),
                           borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(10))),
-                      child: Text(
-                        "${widget.priceText} TL",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyMedium
-                            ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                                color: AppColors.basicWhite),
+                              topLeft: Radius.circular(20))),
+                      child: Center(
+                        child: Text(
+                          "${widget.priceText} TL",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  color: AppColors.basicWhite),
+                        ),
                       ),
                     )
                   ],
