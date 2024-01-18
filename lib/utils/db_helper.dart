@@ -54,5 +54,16 @@ class DatabaseHelper {
     return advertsMapList.map((map) => Advert.fromMap(map)).toList();
   }
 
+  Future<List<Advert>> getAdvertsByCategory(String category) async {
+    Database db = await database;
+    if(category == "Hepsi") {
+      return await getAdverts();
+    }
+    else {
+      List<Map<String,dynamic>> advertsMapList = await db.query('adverts',where: 'category = ?', whereArgs: [category]);
+      return advertsMapList.map((map) => Advert.fromMap(map)).toList();
+    }
+  }
+
 
 }
