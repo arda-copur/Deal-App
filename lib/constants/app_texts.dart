@@ -16,4 +16,9 @@ class AppTexts {
   //Advertisements Views
   static String notYet = "Henüz ilan paylaşılmamış.";
   static String description = "Açıklama";
+  //Categories
+  static String locationText = "Konum";
+  static String priceText = "Fiyat";
+  static String categoryText = "Kategori";
+  static String phoneText = "Satıcı Numarası";
 }
