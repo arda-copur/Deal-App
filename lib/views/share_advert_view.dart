@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:deal_app/constants/app_colors.dart';
-import 'package:deal_app/core/app_button.dart';
+import 'package:deal_app/constants/app_texts.dart';
+import 'package:deal_app/features/app_button.dart';
 import 'package:deal_app/model/advert.dart';
 import 'package:deal_app/utils/db_helper.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,8 @@ class _ShareAdvertisementViewState extends State<ShareAdvertisementView> {
             children: [
               ElevatedButton(
                 onPressed: _pickImage,
-                child:  Text('Fotoğraf Ekle',style: Theme.of(context).textTheme.bodyMedium),
+                child: Text(AppTexts.addPhoto,
+                    style: Theme.of(context).textTheme.bodyMedium),
               ),
               selectedImage != null
                   ? Image.file(selectedImage!, height: 100)
@@ -52,20 +53,7 @@ class _ShareAdvertisementViewState extends State<ShareAdvertisementView> {
               const SizedBox(
                 height: 10,
               ),
-              DropdownButton<String>(
-                  hint: const Text("Kategori seç"),
-                  value: selectedCategory,
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      selectedCategory = newValue;
-                    });
-                  },
-                  items: categories.map((String category) {
-                    return DropdownMenuItem<String>(
-                      value: category,
-                      child: Text(category),
-                    );
-                  }).toList()),
+              customDropDown(),
               customTextFormField(titleController, "İlan adı",
                   const Icon(Icons.turned_in_outlined)),
               customTextFormField(descriptionController, "Açıklama",
@@ -89,6 +77,23 @@ class _ShareAdvertisementViewState extends State<ShareAdvertisementView> {
         ),
       ),
     );
+  }
+
+  DropdownButton<String> customDropDown() {
+    return DropdownButton<String>(
+                hint: Text(AppTexts.chooseCategory),
+                value: selectedCategory,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedCategory = newValue;
+                  });
+                },
+                items: categories.map((String category) {
+                  return DropdownMenuItem<String>(
+                    value: category,
+                    child: Text(category),
+                  );
+                }).toList());
   }
 
   Column customTextFormField(
