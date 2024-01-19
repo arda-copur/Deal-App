@@ -5,7 +5,6 @@ import 'package:deal_app/constants/app_texts.dart';
 import 'package:deal_app/model/advert.dart';
 import 'package:flutter/material.dart';
 
-
 class AdvertisementDetailView extends StatelessWidget {
   final Advert advert;
   const AdvertisementDetailView({super.key, required this.advert});
@@ -17,7 +16,7 @@ class AdvertisementDetailView extends StatelessWidget {
       body: Stack(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.4,
+              height: MediaQuery.of(context).size.height * 0.4,
               width: double.infinity,
               child: Image.file(
                 File(advert.fotoPath.toString()),
@@ -78,52 +77,91 @@ class AdvertisementDetailView extends StatelessWidget {
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
-              )
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Padding(padding: const EdgeInsets.only(top: 10,bottom: 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 5,
-                      width: 35,
-                      color: Colors.black12,
-                    ),
-                  ],
-                ),
-                ),
-                 Text(advert.title,style: Theme.of(context).textTheme.headlineLarge),
-                 
-                 const SizedBox(height: 10,),
-              
-                 const Padding(
-                   padding: EdgeInsets.symmetric(vertical: 15),
-                   child: Divider(height: 4,color: Color.fromARGB(255, 218, 217, 217),),
-                 ),
-                Text(AppTexts.description,style: Theme.of(context).textTheme.titleLarge),
-                 const SizedBox(height: 5,),
-                 Text(advert.description,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-                const SizedBox(height: 5,),
-                 Text("Konum",style: Theme.of(context).textTheme.titleLarge),
-                 const SizedBox(height: 5,),
-                 Text(advert.location,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-                  const SizedBox(height: 5,),
-                   Text("Fiyat",style: Theme.of(context).textTheme.titleLarge),
-                    Text("${advert.price.toString()} TL ",style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-                    const SizedBox(height: 5,),
-                    Text("Kategori",style: Theme.of(context).textTheme.titleLarge),
-                    Text(advert.category.toString(),style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-                    const SizedBox(height: 5,),
-                    Text("Satıcı Numarası",style: Theme.of(context).textTheme.titleLarge),
-                    Text(advert.phoneNumber.toString(),style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.basicGrey)),
-
-             
-                ],
-              ),
+              )),
+          child: customColumn(context),
         );
       },
+    );
+  }
+
+  Column customColumn(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 10, bottom: 25),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 5,
+                width: 35,
+                color: Colors.black12,
+              ),
+            ],
+          ),
+        ),
+        Text(advert.title, style: Theme.of(context).textTheme.headlineLarge),
+        const SizedBox(
+          height: 10,
+        ),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 15),
+          child: Divider(
+            height: 4,
+            color: Color.fromARGB(255, 218, 217, 217),
+          ),
+        ),
+        Text(AppTexts.description,
+            style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(advert.description,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: AppColors.basicGrey)),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(AppTexts.locationText, style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(advert.location,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: AppColors.basicGrey)),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(AppTexts.priceText, style: Theme.of(context).textTheme.titleLarge),
+        Text("${advert.price.toString()} TL ",
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: AppColors.basicGrey)),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(AppTexts.categoryText, style: Theme.of(context).textTheme.titleLarge),
+        Text(advert.category.toString(),
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: AppColors.basicGrey)),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(AppTexts.phoneText, style: Theme.of(context).textTheme.titleLarge),
+        Text(advert.phoneNumber.toString(),
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: AppColors.basicGrey)),
+      ],
     );
   }
 }
