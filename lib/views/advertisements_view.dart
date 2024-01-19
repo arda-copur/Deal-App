@@ -1,5 +1,5 @@
 import 'package:deal_app/constants/app_texts.dart';
-import 'package:deal_app/core/advertisement_card.dart';
+import 'package:deal_app/features/advertisement_card.dart';
 import 'package:deal_app/model/advert.dart';
 import 'package:deal_app/utils/db_helper.dart';
 import 'package:deal_app/views/advertisement_detail.view.dart';

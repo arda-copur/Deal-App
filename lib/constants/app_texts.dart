@@ -21,4 +21,7 @@ class AppTexts {
   static String priceText = "Fiyat";
   static String categoryText = "Kategori";
   static String phoneText = "Satıcı Numarası";
+  //Share Advert View
+  static String chooseCategory = "Kategori seç";
+  static String addPhoto = "Fotoğraf Ekle";
 }
