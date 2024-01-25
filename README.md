@@ -1,6 +1,5 @@
 <h1 align="center" id="title">Deal App</h1>
 
-<p id="description">I'm still coding this project but it's mostly done.I'm happy to share it</p>
 
 <h2>Screenshots</h2>
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
